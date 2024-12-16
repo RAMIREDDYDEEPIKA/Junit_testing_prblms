@@ -6,23 +6,26 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class StringManipulation
 {
-    StringUtils stringUtils=new sampleMavenProject.StringUtils();
+    StringUtils stringUtils=new StringUtils();
 
     @Test
     public void reverseString(){
-        String input="hello";
-        assertEquals("olleh",stringUtils.reverse(input));
+        assertEquals("lufituaeb",stringUtils.reverse("beautiful"));
+        assertEquals("hello",stringUtils.reverse("olleh"));
+        assertEquals("uoy",stringUtils.reverse("you"));
     }
 
     @Test
     public void upperCase(){
-        String input="hello";
-        assertEquals("HELLO",stringUtils.toUpperCase(input));
+        assertEquals("HELLO",stringUtils.toUpperCase("hello"));
+        assertEquals("HI",stringUtils.toUpperCase("Hi"));
     }
 
     @Test
     public void palindrome(){
-        String input="madam";
-        assertTrue(stringUtils.isPalindrome(input));
+        assertTrue(stringUtils.isPalindrome("Madam"));
+        assertTrue(stringUtils.isPalindrome("12321"));
+        assertTrue(stringUtils.isPalindrome("Anna"));
+        assertTrue(stringUtils.isPalindrome("@^&*&^@"));
     }
 }

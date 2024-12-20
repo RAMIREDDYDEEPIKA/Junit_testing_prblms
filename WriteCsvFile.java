@@ -13,11 +13,11 @@ public class WriteCsvFile
     @Test
     public void testWriteCsvfile() throws IOException
     {
-        Path tempsfile = Files.createTempFile("Hello", ".csv");
+        Path tempsfile = Files.createTempFile("Sudent", ".csv");
         File file = tempsfile.toFile();
 
         try (BufferedWriter bWriter = new BufferedWriter(new FileWriter(file))) {
-            bWriter.write("Welcome, to, my, world\n");
+            bWriter.write("\n");
             bWriter.write("How, is, my, world?");
 
         }

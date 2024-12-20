@@ -14,7 +14,7 @@ public class ReadCsvFile
     @Test
     public void testReadFile() throws IOException
     {
-        File file=new File("Welcome.csv");
+        File file=new File("Student.csv");
         try(BufferedReader bReader=new BufferedReader(new FileReader(file)))
         {
             String data;
